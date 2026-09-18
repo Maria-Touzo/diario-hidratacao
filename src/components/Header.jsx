@@ -1,9 +1,12 @@
-import { View } from "react-native/types_generated/index";
+import { View, Text } from 'react-native';
 
-function header{
-    <View>
-        <text>
-            Header
-        </text>
-    </View>
-}
+
+export function Header (){
+    
+        <View>
+            <Text>
+                Header
+            </Text>
+        </View>
+    
+};
