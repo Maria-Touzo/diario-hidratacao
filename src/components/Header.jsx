@@ -1,12 +1,15 @@
-import { View, Text } from "react-native"
+import { View, Text, StyleSheet } from "react-native"
 
 
-export function Header(){
+export function Header(  {objetivo} ){
     return(
-        <View>
-            <Text> 💧 Diário de hidratação 💧 </Text>
-            <Text>Meta diária: 2000ml</Text>
+        // a view é como se fosse uma div no html.
+        <View style={headerStyles.container}>
+            <Text style={headerStyles.title}> 💧 Diário de hidratação 💧 </Text>
+            {/* meta diária é dinâmica */}
+            <Text style={headerStyles.subtitle}>Meta diária: {objetivo}ml</Text>
         </View>
         
     )
 }
+
