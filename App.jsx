@@ -6,13 +6,13 @@ import { Header } from './src/components/Header';
  
 
 export default function App() {
+    const GOAL = 2000;
     return (
          <SafeAreaProvider>
         //     <SafeAreaView>
                  <StatusBar barStyle={'auto'}/>
                  <View>
-                    {/* componente objtv recebe através de props a informação que tem que ser inserido no app */}
-                 <Header objetivo={2000}/>  
+                 <Header GOAL={GOAL}/>  
                  </View>
         //     </SafeAreaView>
         // </SafeAreaProvider>
