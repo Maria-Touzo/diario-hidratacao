@@ -1,12 +1,11 @@
-import { View, Text } from 'react-native';
+import { View, Text } from "react-native"
 
 
-export function Header (){
-    
+export function Header(){
+    return(
         <View>
-            <Text>
-                Header
-            </Text>
+            <Text>Olá </Text>
         </View>
-    
-};
+        
+    )
+}
