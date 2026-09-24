@@ -10,14 +10,14 @@ export default function App() {
     const GOAL = 2000;
     return (
          <SafeAreaProvider>
-        //     <SafeAreaView>
+             <SafeAreaView>
                  <StatusBar barStyle={'auto'}/>
                  <View>
                  <Header GOAL={GOAL}/>  
                  <WaterProgress consumed={1000} goal={GOAL}/>
                  </View>
-        //     </SafeAreaView>
-        // </SafeAreaProvider>
+             </SafeAreaView>
+         </SafeAreaProvider>
     )
 }
 
