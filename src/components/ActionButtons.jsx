@@ -6,16 +6,18 @@ export function ActionButtons(){
         <View>
         <Text>Adicionar consumo:</Text>
         <View>
-            <Pressable onPress={}>
-                <Text>I'm pressable!</Text>
+            <Pressable
+                onPress={() => alert('Você me clicou!')}
+                style={({ pressed }) => ({
+                    backgroundColor: pressed ? 'gray' : 'blue', // Fica cinza quando aperta, azul quando solta
+                    padding: 10,
+                    borderRadius: 5,
+                })}
+            >  
+             <Text style={{ color: 'white' }}>Me Aperta!</Text>
             </Pressable>
         </View>
-        <Button
-                onPress={() => {
-                                
-                        }}
-                        title="Reiniciar Dia"
-            />
+    
         </View>
 
         
