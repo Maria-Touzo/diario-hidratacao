@@ -8,12 +8,12 @@ export function WaterProgress({consumed, goal}){
     // math.min serve para limitar a porcentagem
     const porcentagem =  Math.min(Math.round((consumed/goal)*100), 100)
     return(
-        <View>
-            <Text> Você bebeu {consumed}ml hoje.</Text>
-            <Text> Você atingiu {porcentagem}% da meta diária.</Text>
+        <View style={styles.card}>
+            <Text style={styles.consumedText}> {consumed} ml</Text>
+            <Text style={styles.porcentagemText}>{porcentagem}% da meta diária.</Text>
             {/* Barra de progresso */}
             <View style={styles.progressBarBackground}>
-                <View style={[styles.progressBarFill, {whidth: `${porcentagem}%` }]}/>
+                <View style={[styles.progressBarFill, {width: `${porcentagem}%` }]}/>
             </View>
         </View>
     )
