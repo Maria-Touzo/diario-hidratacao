@@ -7,6 +7,7 @@ import { ActionButtons } from './src/components/ActionButtons';
 import { COLORS } from './src/constants/colors';
 import { useState } from 'react';
 import { DicaSaude } from './src/components/DicaSaude';
+import { MetaDiaria } from './src/components/MetaDiaria';
 
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
                  <StatusBar barStyle="dark-content" backgroundColor={COLORS.background}/>
                  <View style={styles.content}>
                  <Header GOAL={GOAL}/>  
+                 <MetaDiaria/>
                  <WaterProgress consumed={consumed} goal={GOAL}/>
                  <ActionButtons onAdd={handleAddWater} onReset={handleReset} />
                  <DicaSaude/>
