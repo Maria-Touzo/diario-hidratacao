@@ -2,13 +2,17 @@ import {  Pressable, StyleSheet, Text, View } from "react-native";
 import { COLORS } from "../constants/colors";
 
 
-export function ActionButtons(onAdd, onReset){
+export function ActionButtons({onAdd, onReset}){
     return(
         <View style={styles.container}>
         <Text style={styles.label}>Adicionar consumo:</Text>
 
         <View style={styles.buttonRow}>
             {/* botão de 200 ml */}
+            <Pressable style={styles.button} onPress={() => onAdd(200)}>
+                <Text style={styles.buttonText}>+100ml</Text>
+           </Pressable>
+
            <Pressable style={styles.button} onPress={() => onAdd(200)}>
                 <Text style={styles.buttonText}>+200ml</Text>
            </Pressable>
@@ -35,7 +39,7 @@ export function ActionButtons(onAdd, onReset){
     
 }
 
-const styles =StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     width: '100%',
   },

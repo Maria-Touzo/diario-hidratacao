@@ -15,8 +15,13 @@ export function WaterProgress({consumed, goal}){
             <View style={styles.progressBarBackground}>
                 <View style={[styles.progressBarFill, {width: `${porcentagem}%` }]}/>
             </View>
-        </View>
+            {/* if para validar o consumo de água consumida pleo usuário */}
+            {consumed < goal ? (<Text>Continue bebendo água para atingir a sua meta, faltam {goal - consumed} ml </Text>) : (<Text>Parabéns, você atingiu a sua meta diária!</Text>) }
+        </View>    
     )
+        
+        
+    
    
 }
 
